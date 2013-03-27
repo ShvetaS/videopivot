@@ -1,0 +1,917 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0083)http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="search.content.shortId" content="hh641354">
+    <meta name="search.content.locale" content="en-us">
+    <meta name="MN" content="4A8352A7-2:46:52 PM">
+    <meta http-equiv="content-language" content="en">
+    
+      <link rel="canonical" href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2.aspx">
+      <meta name="NormalizedUrl" content="http://msdn.microsoft.com/en-us/hh641354(d=default,l=en-us,v=MSDN.10).aspx">
+    
+        <meta name="Search.MSCategory" content="bb447661">
+    
+        <meta name="Search.MSCategory" content="bb676235">
+    
+        <meta name="Search.MSCategory" content="gg299336">
+    
+        <meta name="Search.MSCategory" content="hh667372">
+    
+        <meta name="Search.MSCategory" content="hh667370">
+    
+        <meta name="Search.MSCategory" content="hh667423">
+    
+        <meta name="Search.MSCategory" content="hh641354">
+    
+        <meta name="Search.TocNodeId" content="hh641354">
+    
+        <script src="/Areas/Global/Content/Omniture/resources/ms2.js" async="" type="text/javascript"></script><script src="/Areas/Global/Content/Omniture/resources/ms2.js" async="" type="text/javascript"></script><script type="text/javascript" async="" src="Exercise_files/ms2.js"></script><script type="text/javascript" src="Exercise_files/jquery-1.js" data-do-not-move="true" data-provides="jQuery">
+        </script>
+    
+
+    <script type="text/javascript" src="Exercise_files/jquery.js" data-do-not-move="true" data-requires="jQuery" data-provides="jQuery.partial">
+    </script>
+    
+    
+            <script type="text/javascript" src="Exercise_files/modernizr2.js" data-do-not-move="true" data-provides="modernizr, modernizr2, yepnope">
+    </script>
+    
+    
+    <title>Exercise</title>
+<link rel="stylesheet" type="text/css" href="Exercise_files/Combined.css"><script class="mtps-injected">try {
+/**/
+(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { 
+	"image": "http://i.msdn.microsoft.com", 
+	"js": "http://i2.msdn.microsoft.com", 
+	"css": "http://i3.msdn.microsoft.com"
+});
+/**/
+} finally { MTPS._injectNextScript_0 && MTPS._injectNextScript_0(); }</script><script class="mtps-injected" src="Exercise_files/Combined.js"></script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_0ddfe6aa87134f6593e0a9d7866275c8").chili();
+//
+} finally { MTPS._injectNextScript_2 && MTPS._injectNextScript_2(); }</script><style type="text/css">/* Chili -- cs */
+.cs__mlcom { color: #4040c2; }
+.cs__com { color: green; }
+.cs__string { color: teal; }
+.cs__preproc { color: red; }
+.cs__number { color: red; }
+.cs__keyword { color: navy; font-weight: bold; }</style><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_47a68f8ceeb3453496e0c84c04195180").chili();
+//
+} finally { MTPS._injectNextScript_3 && MTPS._injectNextScript_3(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_946b765fa17941f89c057d0cbd06fd85").chili();
+//
+} finally { MTPS._injectNextScript_4 && MTPS._injectNextScript_4(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_b3e3e1dc1d2849cab0031cbc62808892").chili();
+//
+} finally { MTPS._injectNextScript_5 && MTPS._injectNextScript_5(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_dae66292a8f24ad1b34cee72055902bd").chili();
+//
+} finally { MTPS._injectNextScript_6 && MTPS._injectNextScript_6(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_bfc27747bb4a452bbda5b944c33f5f25").chili();
+//
+} finally { MTPS._injectNextScript_7 && MTPS._injectNextScript_7(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_623d68169ea6417c82840831a053df2d").chili();
+//
+} finally { MTPS._injectNextScript_8 && MTPS._injectNextScript_8(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_fa7aaba2e2234826a08b49ff0e215d7b").chili();
+//
+} finally { MTPS._injectNextScript_9 && MTPS._injectNextScript_9(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_b284d7acaf3b46d0a58a6fd6178ba414").chili();
+//
+} finally { MTPS._injectNextScript_10 && MTPS._injectNextScript_10(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_c0e17782719c4c07b8e7df781ba3a7ed").chili();
+//
+} finally { MTPS._injectNextScript_11 && MTPS._injectNextScript_11(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_aa3f6d9c85a749e6a9b2e9a3c0210a8b").chili();
+//
+} finally { MTPS._injectNextScript_12 && MTPS._injectNextScript_12(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_111bec7a0f2946ec98cd280d796ae9c5").chili();
+//
+} finally { MTPS._injectNextScript_13 && MTPS._injectNextScript_13(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_86dbd44f34b245c99e9fd6d92bcf712c").chili();
+//
+} finally { MTPS._injectNextScript_14 && MTPS._injectNextScript_14(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_741bde7ded294fee8263df4cf29b9f83").chili();
+//
+} finally { MTPS._injectNextScript_15 && MTPS._injectNextScript_15(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_eed97281c432445083a4b8d5eb79482b").chili();
+//
+} finally { MTPS._injectNextScript_16 && MTPS._injectNextScript_16(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_a9a99341f3df453880380d622c74ec46").chili();
+//
+} finally { MTPS._injectNextScript_17 && MTPS._injectNextScript_17(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_d767be573a3b4478922bc8cb055480db").chili();
+//
+} finally { MTPS._injectNextScript_18 && MTPS._injectNextScript_18(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_dfe2210f5b3f45fb9fce90a65093e976").chili();
+//
+} finally { MTPS._injectNextScript_19 && MTPS._injectNextScript_19(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_d9d2b249afdb4796bcb5c5da242a079d").chili();
+//
+} finally { MTPS._injectNextScript_20 && MTPS._injectNextScript_20(); }</script><script class="mtps-injected" src="Exercise_files/SearchBox.js"></script><script class="mtps-injected" src="Exercise_files/SearchBox.txt"></script><script class="mtps-injected">try {
+$(document).ready(function () {
+            var opener = "#SiteFeedbackLinkOpener";
+            $(opener).click(function () {
+                window.open('https://lab.msdn.microsoft.com/mailform/contactus.aspx?refurl=http%3a%2f%2fmsdn.microsoft.com%2fen-us%2fwindowsphonetrainingcourse_todolocaldatabase_topic2(v%3dmsdn.10)&loc=en-us', 'SiteFeedback', 'width=670,resizable=no,height=700,toolbar=no,location=no,scrollbars=yes,directories=no,status=no,menubar=no'); return false;
+            });
+        });
+} finally { MTPS._injectNextScript_23 && MTPS._injectNextScript_23(); }</script><script class="mtps-injected">try {
+/**/
+    
+      var wt_nvr_ru = "WT_NVR_RU";
+      var wt_fpcdom = ".microsoft.com";
+      var wt_domlist = "msdn.microsoft.com";
+      var wt_pathlist = "";var wt_paramlist = "DCSext.mtps_devcenter";
+      var wt_siteid = "MSDN";
+      var gDomain="m.webtrends.com";
+    var gDcsId = "dcsmgru7m99k7mqmgrhudo0k8_8c6m";
+    var gFpc = "WT_FPC";
+    if (document.cookie.indexOf(gFpc + "=") == -1) {
+        var scriptElem = document.createElement('script');
+        scriptElem.src = "http" + (window.location.protocol.indexOf('https:') == 0 ? 's' : '') + "://" + gDomain + "/" + gDcsId + "/wtid.js";
+        document.getElementsByTagName('head')[0].appendChild(scriptElem);
+    }
+    var detectedLocale = "en-us";
+    var wtsp = "_msdn_";
+    var gTrackEvents = "1";
+    /**/
+} finally { MTPS._injectNextScript_24 && MTPS._injectNextScript_24(); }</script><script src="Exercise_files/wtid.js"></script><script class="mtps-injected" src="Exercise_files/webtrendsscript.js"></script><script class="mtps-injected">try {
+var omni_guid = 'c_10d22a673b0a4f2890c07b93421d5031';
+} finally { MTPS._injectNextScript_26 && MTPS._injectNextScript_26(); }</script><script class="mtps-injected" src="Exercise_files/omni_rsid.js"></script><script class="mtps-injected" src="Exercise_files/broker.js"></script><script class="mtps-injected">try {
+/**/
+(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { 
+	"image": "http://i.msdn.microsoft.com", 
+	"js": "http://i2.msdn.microsoft.com", 
+	"css": "http://i3.msdn.microsoft.com"
+});
+/**/
+} finally { MTPS._injectNextScript_0 && MTPS._injectNextScript_0(); }</script><script src="Exercise_files/Combined_002.js" class="mtps-injected"></script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_0ddfe6aa87134f6593e0a9d7866275c8").chili();
+//
+} finally { MTPS._injectNextScript_2 && MTPS._injectNextScript_2(); }</script><style type="text/css">/* Chili -- cs */
+.cs__mlcom { color: #4040c2; }
+.cs__com { color: green; }
+.cs__string { color: teal; }
+.cs__preproc { color: red; }
+.cs__number { color: red; }
+.cs__keyword { color: navy; font-weight: bold; }</style><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_47a68f8ceeb3453496e0c84c04195180").chili();
+//
+} finally { MTPS._injectNextScript_3 && MTPS._injectNextScript_3(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_946b765fa17941f89c057d0cbd06fd85").chili();
+//
+} finally { MTPS._injectNextScript_4 && MTPS._injectNextScript_4(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_b3e3e1dc1d2849cab0031cbc62808892").chili();
+//
+} finally { MTPS._injectNextScript_5 && MTPS._injectNextScript_5(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_dae66292a8f24ad1b34cee72055902bd").chili();
+//
+} finally { MTPS._injectNextScript_6 && MTPS._injectNextScript_6(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_bfc27747bb4a452bbda5b944c33f5f25").chili();
+//
+} finally { MTPS._injectNextScript_7 && MTPS._injectNextScript_7(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_623d68169ea6417c82840831a053df2d").chili();
+//
+} finally { MTPS._injectNextScript_8 && MTPS._injectNextScript_8(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_fa7aaba2e2234826a08b49ff0e215d7b").chili();
+//
+} finally { MTPS._injectNextScript_9 && MTPS._injectNextScript_9(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_b284d7acaf3b46d0a58a6fd6178ba414").chili();
+//
+} finally { MTPS._injectNextScript_10 && MTPS._injectNextScript_10(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_c0e17782719c4c07b8e7df781ba3a7ed").chili();
+//
+} finally { MTPS._injectNextScript_11 && MTPS._injectNextScript_11(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_aa3f6d9c85a749e6a9b2e9a3c0210a8b").chili();
+//
+} finally { MTPS._injectNextScript_12 && MTPS._injectNextScript_12(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_111bec7a0f2946ec98cd280d796ae9c5").chili();
+//
+} finally { MTPS._injectNextScript_13 && MTPS._injectNextScript_13(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_86dbd44f34b245c99e9fd6d92bcf712c").chili();
+//
+} finally { MTPS._injectNextScript_14 && MTPS._injectNextScript_14(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_741bde7ded294fee8263df4cf29b9f83").chili();
+//
+} finally { MTPS._injectNextScript_15 && MTPS._injectNextScript_15(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_eed97281c432445083a4b8d5eb79482b").chili();
+//
+} finally { MTPS._injectNextScript_16 && MTPS._injectNextScript_16(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_a9a99341f3df453880380d622c74ec46").chili();
+//
+} finally { MTPS._injectNextScript_17 && MTPS._injectNextScript_17(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_d767be573a3b4478922bc8cb055480db").chili();
+//
+} finally { MTPS._injectNextScript_18 && MTPS._injectNextScript_18(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_dfe2210f5b3f45fb9fce90a65093e976").chili();
+//
+} finally { MTPS._injectNextScript_19 && MTPS._injectNextScript_19(); }</script><script class="mtps-injected">try {
+//
+  ChiliBook.lineNumbers = true;
+  $("#c_d9d2b249afdb4796bcb5c5da242a079d").chili();
+//
+} finally { MTPS._injectNextScript_20 && MTPS._injectNextScript_20(); }</script><script src="Exercise_files/BaseContentSearchBox.js" class="mtps-injected"></script><script src="Exercise_files/SearchBox_002.js" class="mtps-injected"></script><script class="mtps-injected">try {
+$(document).ready(function () {
+            var opener = "#SiteFeedbackLinkOpener";
+            $(opener).click(function () {
+                window.open('https://lab.msdn.microsoft.com/mailform/contactus.aspx?refurl=http%3a%2f%2fmsdn.microsoft.com%2fen-us%2fwindowsphonetrainingcourse_todolocaldatabase_topic2(v%3dmsdn.10)&loc=en-us', 'SiteFeedback', 'width=670,resizable=no,height=700,toolbar=no,location=no,scrollbars=yes,directories=no,status=no,menubar=no'); return false;
+            });
+        });
+} finally { MTPS._injectNextScript_23 && MTPS._injectNextScript_23(); }</script><script class="mtps-injected">try {
+/**/
+    
+      var wt_nvr_ru = "WT_NVR_RU";
+      var wt_fpcdom = ".microsoft.com";
+      var wt_domlist = "msdn.microsoft.com";
+      var wt_pathlist = "";var wt_paramlist = "DCSext.mtps_devcenter";
+      var wt_siteid = "MSDN";
+      var gDomain="m.webtrends.com";
+    var gDcsId = "dcsmgru7m99k7mqmgrhudo0k8_8c6m";
+    var gFpc = "WT_FPC";
+    if (document.cookie.indexOf(gFpc + "=") == -1) {
+        var scriptElem = document.createElement('script');
+        scriptElem.src = "http" + (window.location.protocol.indexOf('https:') == 0 ? 's' : '') + "://" + gDomain + "/" + gDcsId + "/wtid.js";
+        document.getElementsByTagName('head')[0].appendChild(scriptElem);
+    }
+    var detectedLocale = "en-us";
+    var wtsp = "_msdn_";
+    var gTrackEvents = "1";
+    /**/
+} finally { MTPS._injectNextScript_24 && MTPS._injectNextScript_24(); }</script><script src="Exercise_files/wtid.js"></script><script src="Exercise_files/webtrendsscript_002.js" class="mtps-injected"></script><script class="mtps-injected">try {
+var omni_guid = 'c_10d22a673b0a4f2890c07b93421d5031';
+} finally { MTPS._injectNextScript_26 && MTPS._injectNextScript_26(); }</script><script src="Exercise_files/omni_rsid_002.js" class="mtps-injected"></script><script src="Exercise_files/broker_002.js" class="mtps-injected"></script></head>
+
+    <body id="MTPS_Body" class="MsdnPageBody">
+        
+        <div id="BodyBackground">
+            <div id="JelloSizer">
+                <div id="JelloExpander">
+                    <div id="JelloWrapper">
+                        <div class="Clear"> </div>
+                        <span class="skipnav"><a href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#MainContent">Skip to main content</a></span>
+                        
+<style>
+    .createProfileLink, .profileDivide {
+        display: none;
+    }
+</style>        
+
+
+
+
+
+    
+    <div id="ux-header" class="Chrome ltr">
+        <div class="BrandLogo">
+            <a href="http://msdn.microsoft.com/en-us">
+                <span class="BrandLogoImage msdn" title="MSDN"></span>
+            </a>
+        </div>
+        <div class="GlobalBar">
+            <div id="LocaleSelector">
+                
+<a title="Change your language" id="SelectLocale" href="http://msdn.microsoft.com/en-us/SelectLocale?fromPage=http%3a%2f%2fmsdn.microsoft.com%2fen-us%2fwindowsphonetrainingcourse_todolocaldatabase_topic2">United States (English)</a>
+        
+            
+            
+            </div>
+
+            <div class="Divide"> | </div>
+            <div class="PassportScarab">
+                    
+<a class="createProfileLink" href="http://msdn.microsoft.com/en-us/:ProfileLink:" title=":ProfileText:">:ProfileText:</a>                    <span class="profileDivide"> | </span>
+<a class="scarabLink" href="https://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=11&amp;ct=1359902813&amp;rver=6.0.5276.0&amp;wp=MCLBI&amp;wlcxt=msdn$msdn$msdn&amp;wreply=http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2&amp;lc=1033&amp;id=254354&amp;mkt=en-US" title="Sign in">Sign in</a>
+            </div>
+                
+        </div>
+        <div class="internav">
+            
+
+    
+
+<div class="SearchBox">
+              <form id="HeaderSearchForm" name="HeaderSearchForm" method="get" action="http://social.msdn.microsoft.com/Search" onsubmit="return Epx.Controls.SearchBox.searchBoxOnSubmit(this, this.title);">
+            <input id="HeaderSearchTextBox" name="query" maxlength="200" onfocus="Epx.Controls.SearchBox.watermarkFocus(this, this.title, 'TextBoxSearch')" onblur="Epx.Controls.SearchBox.watermarkBlur(this, this.title, 'TextBoxSearchLoaded')" autocomplete="off" title="Search MSDN with Bing" style="color: rgb(170, 170, 170); font-style: italic;" type="text">
+            <input id="RefinementId" name="refinement" value="" type="hidden">
+            <button id="HeaderSearchButton" value="" type="submit" class="header-search-button" title="Search MSDN with Bing"></button>
+        <div id="SearchFlyoutContainer" style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 255); font-family: arial;"><div id="SuggestionContainer"><ul style="list-style: none; padding: 4px 2px 0px 1px; cursor: pointer; font-size: 8pt; margin: 1px;"></ul></div><div id="FooterContainer" style="width: 100%; margin: 0px; text-align: right; font-size: 8pt;"><a href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#">Close</a></div></div><div style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 255); font-family: arial;" id="SearchFlyoutContainer"><div id="SuggestionContainer"><ul style="list-style: none outside none; padding: 4px 2px 0px 1px; cursor: pointer; font-size: 8pt; margin: 1px;"></ul></div><div style="width: 100%; margin: 0px; text-align: right; font-size: 8pt;" id="FooterContainer"><a href="#">Close</a></div></div><div style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 255); font-family: arial;" id="SearchFlyoutContainer"><div id="SuggestionContainer"><ul style="list-style: none outside none; padding: 4px 2px 0px 1px; cursor: pointer; font-size: 8pt; margin: 1px;"></ul></div><div style="width: 100%; margin: 0px; text-align: right; font-size: 8pt;" id="FooterContainer"><a href="#">Close</a></div></div></form>
+        
+    
+</div>
+
+            <div class="TocNavigation">
+   
+   <div class="toclevel1">
+          <a class="normal" href="http://msdn.microsoft.com/" title="Home">Home</a>
+          <a class="normal" href="http://msdn.microsoft.com/library/default.aspx" title="Library">Library</a>
+          <a class="active" href="http://msdn.microsoft.com/bb188199" title="Learn">Learn</a>
+          <a class="normal" href="http://code.msdn.microsoft.com/" title="Samples">Samples</a>
+          <a class="normal" href="http://msdn.microsoft.com/aa570309" title="Downloads">Downloads</a>
+          <a class="normal" href="http://msdn.microsoft.com/hh361695" title="Support">Support</a>
+          <a class="normal" href="http://msdn.microsoft.com/aa497440" title="Community">Community</a>
+          <a class="normal" href="http://social.msdn.microsoft.com/Forums/en-US/categories" title="Forums">Forums</a>
+
+    </div>
+  
+</div>
+        </div>
+    </div>
+
+                        <div class="Clear"> </div>
+                        <div class="topleftcorner"> </div>
+                        <div class="toprightcorner"> </div>
+                        <div class="alley">
+                            <div class="wrapper">
+                                <div class="inner">
+                                  
+                                    <div class="Clear"> </div>
+                                    <div class="BreadCrumb"><div class="BreadCrumbInner EyebrowContainer">
+<a href="http://msdn.microsoft.com/en-us/default" class="EyebrowLink" title="Microsoft Developer Network">
+Microsoft Developer Network</a> &gt; 
+<a href="http://msdn.microsoft.com/en-us/bb188199" class="EyebrowLink" title="Learn">
+Learn</a> &gt; 
+<a href="http://msdn.microsoft.com/en-us/gg299335" class="EyebrowLink" title="Courses">
+Courses</a> &gt; 
+<a href="http://msdn.microsoft.com/en-us/hh667362" class="EyebrowLink" title="Windows Phone SDK 7.1 Training Course">
+Windows Phone SDK 7.1 Training Course</a> &gt; 
+<a href="http://msdn.microsoft.com/en-us/hh641378" class="EyebrowLink" title="Advanced Topics in Windows Phone Development">
+Advanced Topics in Windows Phone Development</a> &gt; 
+<a href="http://msdn.microsoft.com/en-us/hh641353" class="EyebrowLink" title="Using a local database in the &quot;Tidy&quot; application">
+Using a local database in the "Tidy" application</a> &gt; <span class="EyebrowElement">Exercise</span>
+    
+    </div></div>
+                                    <a name="MainContent"></a>
+                                    <div id="mainSection"><div class="navpage"><table class="multicol"><tbody><tr><td class="innercol" valign="top"><div class="MainColumn"><h2 class="Title">Exercise</h2><a id="_Toc290225530" href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#"></a><p>This
+ lab will focus on presenting functionality that belongs to the model 
+and the ViewModel. The lab offers a “guided tour” of relevant portions 
+of the code and will allow you to gain a deeper understanding of how to 
+utilize local databases in your future applications. </p><a id="_Toc305585585" href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#"></a><h3>Task 1 – Defining a Data Context</h3><p>The <strong>System.Data.Linq.DataContextLe </strong>class
+ maps application objects to database entities. Mapping application 
+objects to database objects requires you to implement a class that 
+derives from <strong>System.Data.Linq.DataContext</strong>. You will also need to add 
+<a href="http://msdn.microsoft.com/en-us/library/bb386971.aspx">
+attributes</a> to your object model. The data context will then map your objects to a corresponding database schema.</p><p>The
+ recommended approach for generating the database in Windows Phone is a 
+code-first approach. You generate the classes manually and supply their 
+attributes, and then (at run-time) the data context creates a database 
+with the relationships you defined in your object model. </p><p>It is also possible to take an existing database and automatically generate a matching data context using the 
+<a href="http://msdn.microsoft.com/en-us/library/bb386987.aspx">
+SqlMetal tool</a>. It is important to note that SqlMetal is not fully 
+compatible with the Windows Phone and the code it generates will not 
+compile until you alter it for use on the device.</p><p>The Tidy 
+application’s data context was created using SqlMetal. This had the 
+advantage of adding various hooks to the object model classes, in the 
+form of partial methods and events, which we use to perform specific 
+actions when the application’s data is altered. </p><ol><li>Open the lab’s solution located under <strong>Source\Begin</strong> in the lab installation folder. Navigate to the <strong>Todo.Business</strong> project, expand the <strong>Models</strong> folder and open the DataContextBase.cs file to view the <strong>DataContextBase</strong> class, which serves as the application’s data context.</li><li>See how each table in the database has a corresponding property in the <strong>DataContextBase </strong>class of the <strong>Table&lt;T&gt;</strong> type, where <strong>T</strong> is the type of the entity represented by the table.</li><li>Notice how for each <strong>Table&lt;T&gt; </strong>property in<strong> DataContextBase</strong>, the class <strong>T</strong> has the <strong>Table</strong> attribute applied to it. This attribute defines the table containing the data for entities of type <strong>T</strong>.</li><li>Note how all classes in the object model implement the <strong>IPropertyChangedNotifier</strong> interface, which in turn inherits from <strong>INotifyPropertyChanged</strong>.
+ This will allow you to bind parts of the user interface to the data 
+contained in the objects. The entity classes also implement <strong>INotifyPropertyChanging</strong>, an interface that allows SQL CE to optimize how it caches and manages its data, and <strong>ITodoTable</strong> that exposes an ID property. </li><li>Here is a portion of the code that defines the data context. The code demonstrates how the task table is defined in the <strong>DataContextBase</strong> class and how the <strong>Task</strong>
+ class defines a link between one of its properties and a database 
+column, as well as a link with a different entity represented by the <strong>Attachment</strong> class:<div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_0ddfe6aa87134f6593e0a9d7866275c8" class="csharp"><ol><li style=""><span class="cs__keyword">public</span>&nbsp;partial&nbsp;<span class="cs__keyword">class</span>&nbsp;DataContextBase&nbsp;:&nbsp;System.Data.Linq.DataContext{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">static</span>&nbsp;System.Data.Linq.Mapping.MappingSource&nbsp;mappingSource&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">new</span>&nbsp;AttributeMappingSource();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;DataContextBase(<span class="cs__keyword">string</span>&nbsp;connection)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">base</span>(connection,&nbsp;mappingSource)&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OnCreated();&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;DataContextBase(<span class="cs__keyword">string</span>&nbsp;connection,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Data.Linq.Mapping.MappingSource&nbsp;mappingSource)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">base</span>(connection,&nbsp;mappingSource)&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OnCreated();&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;System.Data.Linq.Table&lt;Task&gt;&nbsp;Items&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;<span class="cs__keyword">this</span>.GetTable&lt;Task&gt;();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;The&nbsp;rest&nbsp;of&nbsp;the&nbsp;class&nbsp;was&nbsp;omitted}&nbsp;[Table(&nbsp;Name="Tasks")]public&nbsp;partial&nbsp;class&nbsp;Task&nbsp;:&nbsp;INotifyPropertyChanging,&nbsp;INotifyPropertyChanged,&nbsp;ITodoTable{&nbsp;&nbsp;&nbsp;&nbsp;[Column(Storage&nbsp;=&nbsp;"_EstimateTime",&nbsp;DbType&nbsp;=&nbsp;"DateTime")]&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;System.Nullable&lt;System.DateTime&gt;&nbsp;EstimateTime&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;this._EstimateTime;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;((this._EstimateTime&nbsp;!=&nbsp;value))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.OnEstimateTimeChanging(value);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.SendPropertyChanging();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._EstimateTime&nbsp;=&nbsp;value;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.SendPropertyChanged("EstimateTime");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.OnEstimateTimeChanged();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Association(Name&nbsp;=&nbsp;"Attachment_Items",&nbsp;Storage&nbsp;=&nbsp;"_Attachment",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ThisKey&nbsp;=&nbsp;"ItemID",&nbsp;OtherKey&nbsp;=&nbsp;"ItemID",&nbsp;DeleteRule&nbsp;=&nbsp;"NO&nbsp;ACTION")]&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;EntitySet&lt;Attachment&gt;&nbsp;Attachment&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;this._Attachment;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._Attachment.Assign(value);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;The&nbsp;rest&nbsp;of&nbsp;the&nbsp;class&nbsp;was&nbsp;omitted}</span></li></ol></code></pre>
+</div>
+
+</div><p>We have mentioned the attributes in the above code earlier. 
+These attributes allow you to define tables, columns, keys, and indexes.</p><p>The table below summarizes some of the attributes provided by LINQ to SQL:</p><p>
+<img src="Exercise_files/windowsphonetrainingcourse_todolocaldatabase_topic2.png" alt=""></p><p></p><p><span class="label"><em>Though
+ we used SqlMetal for defining the data context in this application, let
+ us see how to create an entire entity manually by using the Task class 
+as an example.</em></span></p><p></p></li><li>Begin by defining the class and applying the <strong>Table</strong> attribute to it:<div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_47a68f8ceeb3453496e0c84c04195180" class="csharp"><ol><li style="">[Table]<span class="cs__keyword">public</span>&nbsp;partial&nbsp;<span class="cs__keyword">class</span>&nbsp;Task{}</li></ol></code></pre>
+</div>
+
+</div><p></p></li><li>Now define the class’s properties: <div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_946b765fa17941f89c057d0cbd06fd85" class="csharp"><ol><li style="">[Table]<span class="cs__keyword">public</span>&nbsp;partial&nbsp;<span class="cs__keyword">class</span>&nbsp;Task{&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;TaskStatus&nbsp;Status&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;PriorityValue&nbsp;Priority&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;System.Guid&nbsp;Id&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;System.Guid&nbsp;ProjectID&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;System.Guid&nbsp;LocationID&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">bool</span>&nbsp;Completed&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;Title&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;System.Nullable&lt;System.DateTime&gt;&nbsp;DueDate&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;EntitySet&lt;Attachment&gt;&nbsp;Attachment&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;Project&nbsp;Projects&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;Location&nbsp;Location&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</li></ol></code></pre>
+</div>
+
+</div><p></p></li><li>Add a <strong>Column</strong> attribute to define 
+the columns that will map to the various properties. Note how some of 
+the properties are left without this attribute, we will handle them in 
+the next step:<div class="boxcontent"><div class="boxheader"><p>C#</p></div><pre>public partial class Task</pre><pre>{</pre><pre>    [Column( Storage = "_Status", DbType="Int")] </pre><pre>    public TaskStatus Status { get; set; }</pre><pre><pre>     [Column(Storage = "_Priority", DbType = "Int")] </pre><pre>    public PriorityValue Priority { get; set; } </pre><pre><pre>     [Column(Storage = "_ItemID", DbType = "UniqueIdentifier NOT NULL", </pre><pre>    IsPrimaryKey = true)]</pre><pre>    public System.Guid Id { get; set; }</pre><pre><pre>     [Column(Storage = "_ProjectID", DbType = "UniqueIdentifier NOT NULL")]</pre><pre>    public System.Guid ProjectID { get; set; } </pre><pre><pre>     [Column(Storage = "_LocationID", DbType = "UniqueIdentifier")]</pre><pre>    public System.Guid LocationID { get; set; }</pre><pre><pre>     [Column(Storage = "_Completed", DbType = "Bit NOT NULL")]</pre><pre>    public bool Completed { get; set; }</pre><pre><pre>     [Column(Storage = "_Title", DbType = "NVarChar(100) NOT NULL", </pre><pre>    CanBeNull = false)]</pre><pre>    public string Title { get; set; }</pre><pre><pre>     [Column(Storage = "_DueDate", DbType = "DateTime")]</pre><pre>    public System.Nullable&lt;System.DateTime&gt; DueDate { get; set; }</pre><pre>    public EntitySet&lt;Attachment&gt; Attachment { get; set; } </pre><pre><pre>    public Project Projects { get; set; }</pre><pre>
+
+<div class="CodeHighlighter">
+  <pre><code id="c_b3e3e1dc1d2849cab0031cbc62808892" class="csharp"><ol><li style=""><span class="cs__keyword">public</span>&nbsp;Location&nbsp;Location&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li></ol></code></pre>
+</div>
+
+<pre>}</pre></pre></pre></pre></pre></pre></pre></pre></pre></pre></div><p></p></li><li>Add an <strong>Association</strong> attribute to the remaining properties. These properties represent a reference to a different entity:<div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_dae66292a8f24ad1b34cee72055902bd" class="csharp"><ol><li style=""><span class="cs__keyword">public</span>&nbsp;partial&nbsp;<span class="cs__keyword">class</span>&nbsp;Task{&nbsp;&nbsp;&nbsp;&nbsp;[Column(&nbsp;Storage&nbsp;=&nbsp;<span class="cs__string">"_Status"</span>,&nbsp;DbType=<span class="cs__string">"Int"</span>)]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;TaskStatus&nbsp;Status&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Column(Storage&nbsp;=&nbsp;<span class="cs__string">"_Priority"</span>,&nbsp;DbType&nbsp;=&nbsp;<span class="cs__string">"Int"</span>)]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;PriorityValue&nbsp;Priority&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Column(Storage&nbsp;=&nbsp;<span class="cs__string">"_ItemID"</span>,&nbsp;DbType&nbsp;=&nbsp;<span class="cs__string">"UniqueIdentifier&nbsp;NOT&nbsp;NULL"</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IsPrimaryKey&nbsp;=&nbsp;<span class="cs__keyword">true</span>)]&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;System.Guid&nbsp;Id&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Column(Storage&nbsp;=&nbsp;<span class="cs__string">"_ProjectID"</span>,&nbsp;DbType&nbsp;=&nbsp;<span class="cs__string">"UniqueIdentifier&nbsp;NOT&nbsp;NULL"</span>)]&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;System.Guid&nbsp;ProjectID&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Column(Storage&nbsp;=&nbsp;<span class="cs__string">"_LocationID"</span>,&nbsp;DbType&nbsp;=&nbsp;<span class="cs__string">"UniqueIdentifier"</span>)]&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;System.Guid&nbsp;LocationID&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Column(Storage&nbsp;=&nbsp;<span class="cs__string">"_Completed"</span>,&nbsp;DbType&nbsp;=&nbsp;<span class="cs__string">"Bit&nbsp;NOT&nbsp;NULL"</span>)]&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">bool</span>&nbsp;Completed&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Column(Storage&nbsp;=&nbsp;<span class="cs__string">"_Title"</span>,&nbsp;DbType&nbsp;=&nbsp;<span class="cs__string">"NVarChar(100)&nbsp;NOT&nbsp;NULL"</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CanBeNull&nbsp;=&nbsp;<span class="cs__keyword">false</span>)]&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">string</span>&nbsp;Title&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Column(Storage&nbsp;=&nbsp;<span class="cs__string">"_DueDate"</span>,&nbsp;DbType&nbsp;=&nbsp;<span class="cs__string">"DateTime"</span>)]&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;System.Nullable&lt;System.DateTime&gt;&nbsp;DueDate&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Association(Name&nbsp;=&nbsp;<span class="cs__string">"Attachment_Items"</span>,&nbsp;Storage&nbsp;=&nbsp;<span class="cs__string">"_Attachment"</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ThisKey&nbsp;=&nbsp;<span class="cs__string">"Id"</span>,&nbsp;OtherKey&nbsp;=&nbsp;<span class="cs__string">"ItemID"</span>,&nbsp;DeleteRule&nbsp;=&nbsp;<span class="cs__string">"NO&nbsp;ACTION"</span>)]&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;EntitySet&lt;Attachment&gt;&nbsp;Attachment&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Association(Name&nbsp;=&nbsp;<span class="cs__string">"Project_Item"</span>,&nbsp;Storage&nbsp;=&nbsp;<span class="cs__string">"_Projects"</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ThisKey&nbsp;=&nbsp;<span class="cs__string">"ProjectID"</span>,&nbsp;OtherKey&nbsp;=&nbsp;<span class="cs__string">"Id"</span>,&nbsp;IsForeignKey&nbsp;=&nbsp;<span class="cs__keyword">true</span>)]&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;Project&nbsp;Projects&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Association(Name&nbsp;=&nbsp;<span class="cs__string">"Items_Location"</span>,&nbsp;Storage&nbsp;=&nbsp;<span class="cs__string">"_Location"</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ThisKey&nbsp;=&nbsp;<span class="cs__string">"LocationID"</span>,&nbsp;OtherKey&nbsp;=&nbsp;<span class="cs__string">"Id"</span>,&nbsp;IsForeignKey=<span class="cs__keyword">true</span>)]&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">public</span>&nbsp;Location&nbsp;Location&nbsp;{&nbsp;get;&nbsp;set;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</li></ol></code></pre>
+</div>
+
+</div><p>The associations we have just defined are to the task’s set of 
+attachment, the project to which the task belongs and the task’s 
+associated location. The <strong>Task</strong> entity is now properly 
+mapped to the database. The implementation in the actual code is 
+different as we did not include the various hooks introduced 
+automatically by SqlMetal, nor did we implement the <strong>IPropertyNotifier</strong> interface previously mentioned.</p></li></ol><a id="_Toc305585586" href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#"></a><h3>Task 2 – Creating a Database</h3><p>You
+ have just seen how to define the object model and apply the attributes 
+needed to map it to a database schema. This step will discuss the 
+creation of a database based on that schema. The database will be 
+created at run-time.</p><ol><li>Create an instance of the data context. Observe the following code taken from the <strong>App</strong> class’s constructor located in the <strong>App.xaml.cs</strong> under the <strong>Todo</strong> project:<div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_bfc27747bb4a452bbda5b944c33f5f25" class="csharp"><ol><li style="">TodoDC&nbsp;=&nbsp;<span class="cs__keyword">new</span>&nbsp;DataContextBase(<span class="cs__string">"Data&nbsp;Source='"</span>&nbsp;+&nbsp;DatabaseFilename&nbsp;+&nbsp;<span class="cs__string">"'"</span>&nbsp;+&nbsp;&nbsp;&nbsp;(DatabasePassword.Length&nbsp;==&nbsp;<span class="cs__number">0</span>&nbsp;?&nbsp;<span class="cs__string">""</span>&nbsp;:&nbsp;<span class="cs__string">";Password='"</span>&nbsp;+&nbsp;DatabasePassword&nbsp;+&nbsp;<span class="cs__string">"'"</span>));</li></ol></code></pre>
+</div>
+
+</div><p>This creates a new instance of <strong>DataContextBase</strong> for use by the application. The database’s backing file is located according to the contents of the <strong>DatabaseFilename</strong> constant, which is set to “isostore:ToDo.sdf”.</p></li><li>The <strong>DataContextBase</strong> instance created above is used by the <strong>DataHelper</strong> class (located in the <strong>Todo.Business</strong> project under the <strong>Data</strong> folder), to create the actual database. The <strong>DataHelper</strong>
+ class initializes the application’s database by providing methods to 
+check whether the database is already present in the application’s 
+isolated storage and to create it if it is not. The <strong>DataHelper </strong>class
+ populates the database with initial data once it is created, provides a
+ default project, and defines available attachment types.</li><li>Open the <strong>DataHelper.cs</strong> file that can be found in the location mentioned in the previous step, and examine the <strong>DataHelper</strong> class’s <strong>CreateDatabase</strong> method:<div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_623d68169ea6417c82840831a053df2d" class="csharp"><ol><li style=""><span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">static</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;CreateDatabase(DataContextBase&nbsp;todo){&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">try</span>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Generate&nbsp;the&nbsp;database&nbsp;(with&nbsp;structure)&nbsp;from&nbsp;the&nbsp;code-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;based&nbsp;data&nbsp;context&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;todo.CreateDatabase();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Populate&nbsp;the&nbsp;database&nbsp;with&nbsp;system&nbsp;data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GenerateSystemData(todo);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Create&nbsp;an&nbsp;initial&nbsp;task&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Task&nbsp;items&nbsp;=&nbsp;new&nbsp;Task();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items.ItemID&nbsp;=&nbsp;Guid.NewGuid();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items.Title&nbsp;=&nbsp;"Welcome&nbsp;to&nbsp;the&nbsp;\"Todo\"!";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items.Completed&nbsp;=&nbsp;true;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;todo.Items.InsertOnSubmit(items);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;todo.SubmitChanges();&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;catch&nbsp;(Exception&nbsp;ex)&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageBox.Show("Error&nbsp;while&nbsp;creating&nbsp;the&nbsp;DB:&nbsp;"&nbsp;+&nbsp;ex.Message);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Diagnostics.Debug.WriteLine("Error&nbsp;while&nbsp;creating&nbsp;the&nbsp;DB:&nbsp;"&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.Message);&nbsp;&nbsp;&nbsp;&nbsp;}}</span></li></ol></code></pre>
+</div>
+
+</div><p>In the above method, only a single line of code is actually responsible for creating the database and that is the call to the <strong>DataContextBase</strong>’s <strong>CreateDatabase</strong> method, inherited from <strong>System.Data.Linq.DataContext</strong>.
+ The rest of the method populates the new database with initial data. 
+This portion of the code runs only on the very first time the 
+application runs. Once a database has been created, subsequent launches 
+of the application will simply open the existing database, as can be 
+seen in the <strong>InitializeDatabase</strong> method, also in the <strong>DataHelper</strong> class:</p><div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_fa7aaba2e2234826a08b49ff0e215d7b" class="csharp"><ol><li style=""><span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">static</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;InitializeDatabase(DataContextBase&nbsp;todo){&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(IsolatedStorageFile&nbsp;iso&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IsolatedStorageFile.GetUserStoreForApplication())&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(iso.FileExists(<span class="cs__string">"ToDo.sdf"</span>))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CreateDatabase(todo);&nbsp;&nbsp;&nbsp;&nbsp;}}</li></ol></code></pre>
+</div>
+
+</div></li></ol><a id="_Toc305585587" href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#"></a><h3>Task 3 – Deploying an Existing Database</h3><p>There
+ is an alternative to creating a new database from scratch and that is 
+deploying a predefined database. An initial database is embedded into 
+the application’s xap file like any other resource (such as an image or 
+sound file), the application loads the database file and writes it to 
+isolated storage. Once the database is in isolated storage, it is ready 
+for use by the application.</p><p>This approach is often used with 
+databases that need to contain large amounts of reference data. A good 
+example of a database that contains a great deal of data would be a 
+dictionary. As the Tidy application does not have much initial data, it 
+does not make use of this approach.</p><p>Deploying a ready-made database consists of three simple steps:</p><ol><li>Access the resource stream for the initial database file resource.</li><li>Create an isolated storage file to serve as the application’s database file.</li><li>Write the contents of the initial database file to the isolated storage file.<p>The code below demonstrates the above steps:</p><div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_b284d7acaf3b46d0a58a6fd6178ba414" class="csharp"><ol><li style=""><span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;CreateDatabaseFromResourceFile(<span class="cs__keyword">string</span>&nbsp;inFilename,&nbsp;<span class="cs__keyword">string</span>&nbsp;outFilename){&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Step&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;Stream&nbsp;str&nbsp;=&nbsp;Application.GetResourceStream(new&nbsp;Uri(inFilename,&nbsp;UriKind.Relative)).Stream;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Step&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;IsolatedStorageFileStream&nbsp;outFile&nbsp;=&nbsp;iso.CreateFile(outFilename);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Step&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;outFile.Write(ReadToEnd(str),&nbsp;0,&nbsp;(int)str.Length);&nbsp;&nbsp;&nbsp;&nbsp;str.Close();&nbsp;&nbsp;&nbsp;&nbsp;outFile.Close();}</span></li></ol></code></pre>
+</div>
+
+</div><p>The “ReadToEnd” simply returns the entire contents of the deployed database file stream as a byte array.</p></li></ol><a id="_Toc305585588" href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#"></a><h3>Task 4 – Getting Data</h3><p>Now
+ that we have seen how to initialize the application’s database, it is 
+time to see how we can access the data contained inside the database. We
+ will show this by examining portions of the <strong>TaskViewModel</strong> class contained in the <strong>Todo</strong> project under the <strong>ViewModels</strong> folder. The <strong>TaskViewModel </strong>accesses the application’s model directly by using the data context.</p><div class="CCI_Container clsNote"><div class="CCI_Header"><strong>Note:</strong></div><div class="CCI_Text"><strong>&nbsp;</strong>Though in this lab we use the <strong>TaskViewModel</strong> in our examples, any of the other classes that inherit from <strong>ViewModelItemsBase </strong>can serve as an example.</div></div><ol><li>Observe the <strong>TaskViewModel </strong>class’s <strong>LoadData</strong> method:<div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_c0e17782719c4c07b8e7df781ba3a7ed" class="csharp"><ol><li style=""><span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">override</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;LoadData(){&nbsp;&nbsp;&nbsp;&nbsp;PropertyChanged&nbsp;+=&nbsp;<span class="cs__keyword">new</span>&nbsp;PropertyChangedEventHandler(TasksViewModel_PropertyChanged);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;tasks&nbsp;=&nbsp;from&nbsp;t&nbsp;<span class="cs__keyword">in</span>&nbsp;todoDC.Items&nbsp;select&nbsp;t;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">foreach</span>&nbsp;(var&nbsp;task&nbsp;<span class="cs__keyword">in</span>&nbsp;tasks)&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Items.Add(task);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;task.PropertyChanged&nbsp;+=&nbsp;task_PropertyChanged;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Only&nbsp;register&nbsp;this&nbsp;now,&nbsp;so&nbsp;that&nbsp;we&nbsp;do&nbsp;not&nbsp;fire&nbsp;updates&nbsp;for&nbsp;each&nbsp;and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;every&nbsp;item&nbsp;loaded&nbsp;&nbsp;&nbsp;&nbsp;Items.CollectionChanged&nbsp;+=&nbsp;Items_CollectionChanged;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IsDataLoaded&nbsp;=&nbsp;true;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NotifyCollectionChanges();}</span></li></ol></code></pre>
+</div>
+
+</div><p>Most of the method is dedicated to setting up hooks necessary 
+to update the user interface, which is bound to an instance of this 
+ViewModel and not directly to the data contained in the database. The 
+single line highlighted above is necessary to access all tasks contained
+ in the database’s task table. It uses the data context instance 
+contained in “todoDC” (which contains the same instance we have shown 
+how to create in step 1 of task 2).</p><p>The above code places all task
+ instances in an internal observable collection for use by the user 
+interface, and registers for changes in the set of available tasks as 
+well as for changes in individual tasks in order to keep the interface 
+up-to-date.</p></li><li>Observe the <strong>TaskViewModel</strong> class’s NotifyCollectionChanges method:<div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_aa3f6d9c85a749e6a9b2e9a3c0210a8b" class="csharp"><ol><li style=""><span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;NotifyCollectionChanges(){&nbsp;&nbsp;&nbsp;&nbsp;NotifyPropertyChanged(<span class="cs__string">"Today"</span>);&nbsp;&nbsp;&nbsp;&nbsp;NotifyPropertyChanged(<span class="cs__string">"Urgent"</span>);&nbsp;&nbsp;&nbsp;&nbsp;NotifyPropertyChanged(<span class="cs__string">"Completed"</span>);&nbsp;&nbsp;&nbsp;&nbsp;NotifyPropertyChanged(<span class="cs__string">"ByDate"</span>);}</li></ol></code></pre>
+</div>
+
+</div><p>The above method fired change notifications for several of the <strong>TaskViewModel’s </strong>properties, which serve as a filtered collection of the tasks contained in the database.</p></li><li>Observe the <strong>TaskViewModel</strong> class’s <strong>Today</strong> property. This property contains all tasks that are due today and is updated whenever a task’s due date is updated (see the <strong>task_PropertyChanged </strong>handler) or when the collection itself changes (see the <strong>Items_CollectionChanged</strong> handler):<div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_111bec7a0f2946ec98cd280d796ae9c5" class="csharp"><ol><li style=""><span class="cs__keyword">public</span>&nbsp;IOrderedEnumerable&lt;Task&gt;&nbsp;Today{&nbsp;&nbsp;&nbsp;&nbsp;get&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>&nbsp;from&nbsp;task&nbsp;<span class="cs__keyword">in</span>&nbsp;App.TasksViewModel.Items&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where&nbsp;task.DueDate.HasValue&nbsp;&amp;&amp;&nbsp;&nbsp;task.DueDate.Value.Date&nbsp;==&nbsp;DateTime.Now.Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderby&nbsp;task.Priority&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select&nbsp;task;&nbsp;&nbsp;&nbsp;&nbsp;}}</li></ol></code></pre>
+</div>
+
+</div></li></ol><a id="_Toc305585589" href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#"></a><h3>Task 5 – Inserting Data</h3><p>Inserting
+ new data into the database is something that we have already come 
+across in this lab. We will illustrate this by reviewing a previous 
+piece of code as well as by examining the relevant portions of the <strong>TaskViewModel</strong>.</p><ol><li>Observe the following portion of the <strong>DataHelper</strong>’s <strong>CreateDatabase</strong> method:<div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_86dbd44f34b245c99e9fd6d92bcf712c" class="csharp"><ol><li style="">...<span class="cs__com">//&nbsp;Create&nbsp;an&nbsp;initial&nbsp;taskTask&nbsp;items&nbsp;=&nbsp;new&nbsp;Task();items.ItemID&nbsp;=&nbsp;Guid.NewGuid();items.Title&nbsp;=&nbsp;"Welcome&nbsp;to&nbsp;the&nbsp;\"Todo\"&nbsp;application!";items.Completed&nbsp;=&nbsp;true;todo.Items.InsertOnSubmit(items);&nbsp;todo.SubmitChanges();...</span></li></ol></code></pre>
+</div>
+
+</div><p>The above code shows how simple it is to add new data to the 
+database. Simply create an object representing the entity that you wish 
+to add to the database, initialize it, and then call the <strong>InsertOnSubmit</strong>
+ method, supplying the new object for the relevant table exposed by the 
+data context. You must submit the changes to the database by using the 
+data context’s <strong>SubmitChanges</strong> method in order to finalize them. </p></li><li>The task editing/creation screen uses this approach as well. Open the <strong>EditTaskView.xaml.cs </strong>file contained in the Todo project under the <strong>Views\Task</strong> subfolder. This is the code-behind file for the <strong>EditTaskView</strong> class. Navigate to the <strong>OnNavigatedTo</strong> method and you should see the following piece of code:<div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_741bde7ded294fee8263df4cf29b9f83" class="csharp"><ol><li style="">...<span class="cs__keyword">if</span>&nbsp;(NavigationContext.QueryString.ContainsKey(UIConstants.ProjectIdQueryParam)){&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;We&nbsp;navigated&nbsp;to&nbsp;the&nbsp;page&nbsp;to&nbsp;create&nbsp;a&nbsp;new&nbsp;task&nbsp;for&nbsp;the&nbsp;specified&nbsp;project&nbsp;&nbsp;&nbsp;&nbsp;PageTitle.Text&nbsp;=&nbsp;ApplicationStrings.TaskEditNewTaskTitle;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;task&nbsp;=&nbsp;new&nbsp;Task();...</span></li></ol></code></pre>
+</div>
+
+</div><p></p></li><li>When the user opts to save the new task, the <strong>TaskViewModel</strong>’s <strong>Insert</strong> method will save the new task to the database. This method is simply a wrapper for the actions we presented in step 1:<div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_eed97281c432445083a4b8d5eb79482b" class="csharp"><ol><li style=""><span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;Insert(Task&nbsp;item){&nbsp;&nbsp;&nbsp;&nbsp;Items.Add(item);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;todoDC.Items.InsertOnSubmit(item);&nbsp;&nbsp;&nbsp;&nbsp;todoDC.SubmitChanges();}</li></ol></code></pre>
+</div>
+
+</div></li></ol><a id="_Toc305585590" href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#"></a><h3>Task 6 – Updating Data</h3><p>Updating
+ data that already exists in the database is even simpler than inserting
+ new data. The first step would be obtaining a reference to an existing 
+entity.</p><ol><li>Navigate to the <strong>EditTaskView </strong>class as you did in the second step of the previous task, but this time examine the <strong>GetTaskFromQueryString</strong> method:<div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_a9a99341f3df453880380d622c74ec46" class="csharp"><ol><li style=""><span class="cs__keyword">private</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;GetTaskFromQueryString(){&nbsp;&nbsp;&nbsp;&nbsp;Guid&nbsp;taskGuid&nbsp;=&nbsp;NavigationContext.GetGuidParam(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UIConstants.TaskIdQueryParam);&nbsp;&nbsp;&nbsp;&nbsp;task&nbsp;=&nbsp;App.TasksViewModel.Items.FirstOrDefault(t&nbsp;=&gt;&nbsp;t.ItemID&nbsp;==&nbsp;taskGuid);}</li></ol></code></pre>
+</div>
+
+</div><p>This method accesses existing data through the <strong>TaskViewModel</strong> in order to get a reference for a task with a specific ID.</p></li><li>Once
+ the reference has been acquired, the next step is to change one of its 
+properties. The application does not contain such code, as all changes 
+are a result of data binding. The following code, not contained in the 
+application, demonstrates a change to the reference’s properties:<div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_d767be573a3b4478922bc8cb055480db" class="csharp"><ol><li style="">task.Title&nbsp;=&nbsp;<span class="cs__string">"New&nbsp;Title"</span>;</li></ol></code></pre>
+</div>
+
+</div><p></p></li><li>Changing an entity that is linked to the database automatically causes a pending update to be queued in the data context. The <strong>TaskViewModel</strong>’s <strong>Update</strong> method shows how to finalize the pending update:<div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_dfe2210f5b3f45fb9fce90a65093e976" class="csharp"><ol><li style=""><span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;Update(Task&nbsp;item){&nbsp;&nbsp;&nbsp;&nbsp;todoDC.SubmitChanges();}</li></ol></code></pre>
+</div>
+
+</div></li></ol><a id="_Toc305585591" href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#"></a><h3>Task 7 – Deleting Data</h3><p>Deleting data is similar to inserting or updating data, and can also be explained by examining the <strong>TaskViewModel</strong> class:</p><ol><li>Navigate to the <strong>TaskViewModel</strong> class’s <strong>Delete</strong> method:<div class="boxcontent"><div class="boxheader"><p>C#</p></div>
+
+
+
+<div class="CodeHighlighter">
+  <pre><code id="c_d9d2b249afdb4796bcb5c5da242a079d" class="csharp"><ol><li style=""><span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">void</span>&nbsp;Delete(Guid&nbsp;itemID){&nbsp;&nbsp;&nbsp;&nbsp;App.AttachmentViewModel.DeleteByTaskID(itemID);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;res&nbsp;=&nbsp;from&nbsp;i&nbsp;<span class="cs__keyword">in</span>&nbsp;Items&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where&nbsp;i.ItemID&nbsp;==&nbsp;itemID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select&nbsp;i;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Task&nbsp;itm&nbsp;=&nbsp;res.FirstOrDefault();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(<span class="cs__keyword">null</span>&nbsp;!=&nbsp;itm)&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Items.Remove(itm);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;todoDC.Items.DeleteOnSubmit(itm);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;todoDC.SubmitChanges();&nbsp;&nbsp;&nbsp;&nbsp;}}</li></ol></code></pre>
+</div>
+
+</div><p>The above method, which deletes a task based on its ID, 
+searches through the existing task entities for the specified task. If a
+ match is located, it is removed from the <strong>TaskViewModel</strong>’s local item collection and then from the actual database by supplying the task to be removed to the relevant table’s <strong>DeleteOnSubmit</strong> method. As before, the change is not final until the application calls <strong>SubmitChanges</strong>.</p></li></ol><a id="_Toc292920047" href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#"></a><p></p><div class="Center"><div class="BostonPostCard"><h4><strong>
+<a href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase">
+
+							  &lt; previous
+							</a>
+														|
+														
+<a href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic3">
+
+							  next &gt;
+							</a></strong></h4></div></div></div></td><td valign="top"><div class="RightAdRail"><div class="BostonPostCard"><p></p><h4>
+								Downloads</h4><p>
+<a href="http://go.microsoft.com/fwlink/?LinkId=235206">
+
+									Download The Offline Training Kit
+								</a><br>
+<a href="http://az12722.vo.msecnd.net/windowsphonetrainingcourse1-5-2/labs/todolocaldatabase1-0-0/LocalDatabase.docx">
+
+									Download Hands-on Lab Document (DOCX)
+								</a><br>
+<a href="http://az12722.vo.msecnd.net/windowsphonetrainingcourse1-5-2/labs/todolocaldatabase1-0-0/Source.zip">
+
+									Download Hands-on Lab Source Files
+								</a></p><h4>Contents</h4><ul class="bulletedlist"><li>
+<a href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase#_Toc305585583">
+
+                                    Overview
+								  </a></li><li><strong>
+<a href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#_Toc305585584">
+
+                                      Exercise
+								    </a></strong><ul><li>
+<a href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#_Toc305585585">
+
+                                    Task 1 – Defining a Data Context
+								  </a></li><li>
+<a href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#_Toc305585586">
+
+                                    Task 2 – Creating a Database
+								  </a></li><li>
+<a href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#_Toc305585587">
+
+                                    Task 3 – Deploying an Existing Database
+								  </a></li><li>
+<a href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#_Toc305585588">
+
+                                    Task 4 – Getting Data
+								  </a></li><li>
+<a href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#_Toc305585589">
+
+                                    Task 5 – Inserting Data
+								  </a></li><li>
+<a href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#_Toc305585590">
+
+                                    Task 6 – Updating Data
+								  </a></li><li>
+<a href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic2#_Toc305585591">
+
+                                    Task 7 – Deleting Data
+								  </a></li></ul></li><li>
+<a href="http://msdn.microsoft.com/en-us/windowsphonetrainingcourse_todolocaldatabase_topic3#_Toc305585592">
+
+                                    Summary
+								  </a></li></ul></div></div></td></tr></tbody></table></div></div>
+                                     
+    <div id="footerAd" style="margin-left:auto;margin-right:auto;display:table">
+        <div><p></p></div>
+    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ClearBottom"> </div>
+                        <div class="bottomleftcorner"> </div>
+                        <div class="bottomrightcorner"> </div>  
+                      
+   <div id="ux-footer" class="Chrome ltr">
+    <div id="ux-footer-cols">
+        
+
+        <div class="TocNavigation">
+            <div class="linksContainer">
+                    <ul class="links" style="width: 19.99%;">
+                        <li class="linksTitle"><a href="http://msdn.microsoft.com/vstudio/default.aspx" title="Tools">Tools</a></li>
+                                <li><a href="http://msdn.microsoft.com/vstudio/default.aspx" title="Visual Studio">Visual Studio</a></li>
+                                <li><a href="http://expression.microsoft.com/default.aspx" title="Expression">Expression</a></li>
+                                <li><a href="http://www.asp.net/" title="ASP.NET">ASP.NET</a></li>
+                                <li><a href="http://msdn.microsoft.com/silverlight/" title="Silverlight">Silverlight</a></li>
+                    </ul>
+                    <ul class="links" style="width: 19.99%;">
+                        <li class="linksTitle"><a href="http://msdn.microsoft.com/vstudio/default.aspx" title="Platforms">Platforms</a></li>
+                                <li><a href="http://msdn.microsoft.com/vstudio/default.aspx" title="Visual Studio">Visual Studio</a></li>
+                                <li><a href="http://msdn.microsoft.com/windows/apps/default.aspx" title="Windows">Windows</a></li>
+                                <li><a href="https://dev.windowsphone.com/" title="Windows Phone">Windows Phone</a></li>
+                                <li><a href="http://www.windowsazure.com/en-us/develop/overview/" title="Windows Azure">Windows Azure</a></li>
+                                <li><a href="http://msdn.microsoft.com/office/default.aspx" title="Office">Office</a></li>
+                    </ul>
+                    <ul class="links" style="width: 19.99%;">
+                        <li class="linksTitle"><a href="http://msdn.microsoft.com/windowsserver/default.aspx" title="Servers">Servers</a></li>
+                                <li><a href="http://msdn.microsoft.com/windowsserver/default.aspx" title="Windows Server">Windows Server</a></li>
+                                <li><a href="http://msdn.microsoft.com/exchange/default.aspx" title="Exchange Server">Exchange Server</a></li>
+                                <li><a href="http://msdn.microsoft.com/sqlserver/default.aspx" title="SQL Server">SQL Server</a></li>
+                                <li><a href="http://msdn.microsoft.com/biztalk/default.aspx" title="Biz Talk Server">Biz Talk Server</a></li>
+                                <li><a href="http://msdn.microsoft.com/data/default.aspx" title="Data">Data</a></li>
+                    </ul>
+                    <ul class="links" style="width: 19.99%;">
+                        <li class="linksTitle"><a href="http://msdn.microsoft.com/subscriptions/default.aspx" title="Developer resources">Developer resources</a></li>
+                                <li><a href="http://msdn.microsoft.com/subscriptions/default.aspx" title="MSDN Subscriptions">MSDN Subscriptions</a></li>
+                                <li><a href="http://msdn.microsoft.com/magazine/default.aspx" title="MSDN Magazine">MSDN Magazine</a></li>
+                                <li><a href="http://msdn.microsoft.com/aa570311" title="MSDN Flash Newsletter">MSDN Flash Newsletter</a></li>
+                                <li><a href="http://code.msdn.microsoft.com/" title="Code Samples">Code Samples</a></li>
+                                <li><a href="http://social.msdn.microsoft.com/Forums/en-US/categories" title="MSDN Forums">MSDN Forums</a></li>
+                    </ul>
+                    <ul class="links" style="width: 19.99%;">
+                        <li class="linksTitle"><a href="http://msdn.microsoft.com/evalcenter/default.aspx" title="Get started for free">Get started for free</a></li>
+                                <li><a href="http://msdn.microsoft.com/evalcenter/default.aspx" title="MSDN evaluation center">MSDN evaluation center</a></li>
+                                <li><a href="http://www.microsoft.com/bizspark/" title="BizSpark (for startups)">BizSpark (for startups)</a></li>
+                                <li><a href="https://www.dreamspark.com/" title="DreamSpark (for students)">DreamSpark (for students)</a></li>
+                                <li><a href="http://www.microsoft.com/websitespark/" title="WebsiteSpark (for web devs)">WebsiteSpark (for web devs)</a></li>
+                                <li><a href="https://www.microsoft.com/faculty" title="School faculty">School faculty</a></li>
+                    </ul>
+            </div>
+        </div>        
+
+    </div>
+
+    <div class="ux-footer-clear"></div>
+    <div id="footerRight">
+        <div id="FooterLogoContainer"><div id="FooterLogo"></div></div>
+        <div id="FooterCopyright">© 2013 Microsoft. All rights reserved.</div> 
+    </div>
+    <div id="footerLeft">
+        <div id="footerGroup">
+            <div id="LinkGroup">
+                <div id="Links1"><div data-fragmentname="FooterLinks" id="Fragment_FooterLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="LinkList">
+    <div>
+      <div class="LinkColumn">
+        <a href="http://msdn.microsoft.com/en-us/newsletter.aspx" xmlns="http://www.w3.org/1999/xhtml">Newsletter</a>
+      </div>
+      <div class="LinksDivider">|</div>
+      <div class="LinkColumn">
+        <a href="http://msdn.microsoft.com/en-us/subscriptions/aa948875.aspx" xmlns="http://www.w3.org/1999/xhtml">Contact Us</a>
+      </div>
+      <div class="LinksDivider">|</div>
+      <div class="LinkColumn">
+        <a href="http://privacy.microsoft.com/en-us/default.mspx" xmlns="http://www.w3.org/1999/xhtml">Privacy Statement</a>
+      </div>
+      <div class="LinksDivider">|</div>
+      <div class="LinkColumn">
+        <a href="http://msdn.microsoft.com/en-US/cc300389.aspx" xmlns="http://www.w3.org/1999/xhtml">Terms of Use</a>
+      </div>
+      <div class="LinksDivider">|</div>
+      <div class="LinkColumn">
+        <a href="http://www.microsoft.com/About/Legal/EN/US/IntellectualProperty/Trademarks/EN-US.aspx" xmlns="http://www.w3.org/1999/xhtml">Trademarks</a>
+      </div>
+      <div class="Clear"></div>
+    </div>
+  </div>
+</div></div>
+            </div>
+            <div id="Feedback">
+                <div class="feedbackListItem">
+                    <div class="LinksDivider">|</div>
+                    <div class="LinkColumn">
+                        
+
+
+
+
+
+<div class="FooterSiteFeedBack">
+    <a id="SiteFeedbackLinkOpener" href="javascript:void(0)">
+        <span class="FeedbackButton clip20x21" id="FeedbackButton">
+            <img id="feedBackImg" class="cl_footer_feedback_icon" src="Exercise_files/ImageSprite.png" alt="Site Feedback">
+        </span>
+        Site Feedback
+    </a>
+    
+    
+    
+
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+        <div id="Links2"></div>
+    </div>
+</div> 
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+<noscript>
+&lt;img alt="DCSIMG" width="1" height="1" src="http://m.webtrends.com/dcsmgru7m99k7mqmgrhudo0k8_8c6m/njs.gif?dcsuri=/nojavascript&amp;amp;WT.js=No" /&gt;
+</noscript>
+
+
+<noscript>&lt;a href="http://www.omniture.com" title="Web Analytics"&gt;
+&lt;img src="http://msstonojsmsdn.112.2o7.net/b/ss/msstonojsmsdn/1/H.20.2--NS/0" height="1" width="1" border="0" alt="" /&gt;
+&lt;/a&gt;</noscript>
+
+
+
+    <script type="text/javascript" class="mtps-injected">
+/*<![CDATA[*/
+(function(window,document){"use strict";function preload(scripts){for(var result=[],script,e,i=0;i<scripts.length;i++)script=scripts[i],script.hasOwnProperty("url")&&(e=document.createElement("script"),e.src=script.url,script.throwaway=e),result.push(script);return result}function inject(scripts,index){var script,elem;if(index>=scripts.length){delete mtps.injectScripts;return}script=scripts[index],elem=document.createElement("script"),elem.className="mtps-injected",elem.async=!1;var isLoaded=!1,timeoutId=0,injectNextFnName="",injectNext=elem.onerror=function(){isLoaded||(isLoaded=!0,inject(scripts,index+1),window.clearTimeout(timeoutId),elem.onload=elem.onerror=elem.onreadystatechange=null,injectNextFnName&&delete mtps[injectNextFnName],elem.removeEventListener&&elem.removeEventListener("load",injectNext,!1))};elem.addEventListener?elem.addEventListener("load",injectNext,!1):elem.readyState==="uninitialized"?elem.onreadystatechange=function(){(this.readyState==="loaded"||this.readyState==="complete")&&injectNext()}:elem.onload=injectNext,script.hasOwnProperty("url")?(timeoutId=window.setTimeout(injectNext,12e4),elem.src=script.url):(injectNextFnName="_injectNextScript_"+index,mtps[injectNextFnName]=injectNext,timeoutId=window.setTimeout(injectNext,2e3),elem.text="try {\n"+script.txt+"\n} finally { MTPS."+injectNextFnName+" && MTPS."+injectNextFnName+"(); }"),parent.appendChild(elem)}var mtps=window.MTPS||(window.MTPS={}),parent=document.getElementsByTagName("head")[0];mtps.injectScripts=function(scripts){inject(preload(scripts),0)}})(window,document);
+MTPS.injectScripts([
+	{ txt: "/**/\r\n(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { \r\n\t\"image\": \"http://i.msdn.microsoft.com\", \r\n\t\"js\": \"http://i2.msdn.microsoft.com\", \r\n\t\"css\": \"http://i3.msdn.microsoft.com\"\r\n});\r\n/**/" },
+	{ url: "http://i2.msdn.microsoft.com/Combined.js?resources=0:jquery.cookie,0:jquery.chili-2.2,0:recipes;/Areas/Sto/Content/Scripts:0&amp;hashKey=739F52081F62A5F432B357EB35635F17" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_0ddfe6aa87134f6593e0a9d7866275c8\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_47a68f8ceeb3453496e0c84c04195180\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_946b765fa17941f89c057d0cbd06fd85\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_b3e3e1dc1d2849cab0031cbc62808892\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_dae66292a8f24ad1b34cee72055902bd\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_bfc27747bb4a452bbda5b944c33f5f25\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_623d68169ea6417c82840831a053df2d\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_fa7aaba2e2234826a08b49ff0e215d7b\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_b284d7acaf3b46d0a58a6fd6178ba414\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_c0e17782719c4c07b8e7df781ba3a7ed\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_aa3f6d9c85a749e6a9b2e9a3c0210a8b\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_111bec7a0f2946ec98cd280d796ae9c5\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_86dbd44f34b245c99e9fd6d92bcf712c\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_741bde7ded294fee8263df4cf29b9f83\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_eed97281c432445083a4b8d5eb79482b\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_a9a99341f3df453880380d622c74ec46\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_d767be573a3b4478922bc8cb055480db\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_dfe2210f5b3f45fb9fce90a65093e976\").chili();\n//" },
+	{ txt: "//\n  ChiliBook.lineNumbers = true;\n  $(\"#c_d9d2b249afdb4796bcb5c5da242a079d\").chili();\n//" },
+	{ url: "http://i2.msdn.microsoft.com/\\Areas/Epx/Themes/Base\\Content\\SearchBox.js" },
+	{ url: "http://i4.services.social.microsoft.com/search/Widgets/SearchBox.jss?boxid=HeaderSearchTextBox&btnid=HeaderSearchButton&brand=MSDN&loc=en-us&watermark=MSDN" },
+	{ txt: "$(document).ready(function () {\n            var opener = \"#SiteFeedbackLinkOpener\";\n            $(opener).click(function () {\n                window.open(\u0027https://lab.msdn.microsoft.com/mailform/contactus.aspx?refurl=http%3a%2f%2fmsdn.microsoft.com%2fen-us%2fwindowsphonetrainingcourse_todolocaldatabase_topic2(v%3dmsdn.10)&loc=en-us\u0027, \u0027SiteFeedback\u0027, \u0027width=670,resizable=no,height=700,toolbar=no,location=no,scrollbars=yes,directories=no,status=no,menubar=no\u0027); return false;\n            });\n        });" },
+	{ txt: "/**/\n    \n      var wt_nvr_ru = \"WT_NVR_RU\";\n      var wt_fpcdom = \".microsoft.com\";\n      var wt_domlist = \"msdn.microsoft.com\";\n      var wt_pathlist = \"\";var wt_paramlist = \"DCSext.mtps_devcenter\";\n      var wt_siteid = \"MSDN\";\n      var gDomain=\"m.webtrends.com\";\n    var gDcsId = \"dcsmgru7m99k7mqmgrhudo0k8_8c6m\";\n    var gFpc = \"WT_FPC\";\n    if (document.cookie.indexOf(gFpc + \"=\") == -1) {\n        var scriptElem = document.createElement(\u0027script\u0027);\n        scriptElem.src = \"http\" + (window.location.protocol.indexOf(\u0027https:\u0027) == 0 ? \u0027s\u0027 : \u0027\u0027) + \"://\" + gDomain + \"/\" + gDcsId + \"/wtid.js\";\n        document.getElementsByTagName(\u0027head\u0027)[0].appendChild(scriptElem);\n    }\n    var detectedLocale = \"en-us\";\n    var wtsp = \"_msdn_\";\n    var gTrackEvents = \"1\";\n    /**/" },
+	{ url: "http://i2.msdn.microsoft.com/Areas/Sto/Content/Scripts/webtrendsscript.js" },
+	{ txt: "var omni_guid = \u0027c_10d22a673b0a4f2890c07b93421d5031\u0027;" },
+	{ url: "http://i2.msdn.microsoft.com/Areas/Sto/Content/Scripts/omni_rsid.js" },
+	{ url: "http://js.microsoft.com/library/svy/sto/broker.js" }
+]);
+
+/*]]>*/
+</script>
+
+<!--[CDATA[     
+Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx.
+]]-->
+
+<script src="Exercise_files/broker-config.js"></script><div style="display: none;" id="_WEDCSInsertedData"><iframe id="_msnFrame" src="Exercise_files/c_002.gif" style="z-index:-1;height:1px;width:1px;display:none;visibility:hidden;" onload="javascript:MscomBeacon();"></iframe></div><script src="Exercise_files/broker-config_002.js"></script></body></html>
